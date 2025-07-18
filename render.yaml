@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: compliance-ai-frontend-cra-1
-    env: node
-    buildCommand: yarn install --no-frozen-lockfile && yarn build
-    startCommand: serve -s build
-    rootDir: .
