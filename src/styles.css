@@ -110,8 +110,7 @@ html, body {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-  margin: 3rem auto;
-  max-width: 900px;
+  margin-top: 2rem;
 }
 
 .Comparator h2 {
@@ -127,6 +126,7 @@ html, body {
   margin-right: 0.5rem;
 }
 
+/* Updated form for dropdowns */
 .Comparator-form {
   display: flex;
   flex-direction: column;
@@ -144,8 +144,6 @@ html, body {
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 1rem;
-  max-width: 400px;
-  width: 100%;
 }
 
 .Comparator-form button {
@@ -160,6 +158,7 @@ html, body {
   background-color: #004085;
 }
 
+/* Results section */
 .Comparator-results {
   background: #f8f8f8;
   padding: 1rem;
@@ -173,42 +172,21 @@ html, body {
   color: #101d42;
 }
 
-.Comparator-country {
-  margin-bottom: 1rem;
-}
-
-.Comparator-country strong {
-  display: inline-block;
-  width: 120px;
-  color: #101d42;
-}
-
-/* TABLE */
+/* Optional Table Style */
 .comparison-table {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.95rem;
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
 }
 
 .comparison-table th,
 .comparison-table td {
-  border: 1px solid #dee2e6;
-  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
   text-align: left;
-  vertical-align: top;
 }
 
 .comparison-table th {
-  background-color: #f1f3f5;
-  font-weight: 600;
-  color: #101d42;
-}
-
-.comparison-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #f1f1f1;
+  font-weight: bold;
 }
