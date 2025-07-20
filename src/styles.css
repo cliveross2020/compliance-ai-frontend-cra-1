@@ -1,0 +1,145 @@
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* BRAND COLORS */
+:root {
+  --primary-green: #1e4036;
+  --accent-grey: #808080;
+  --light-grey: #f1f1f1;
+  --dark-blue: #101d42;
+}
+
+/* NAVBAR */
+.Navbar {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.Navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.Navbar-brand img {
+  height: 36px;
+}
+.Navbar-title {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.Navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.Navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+.Navbar-links li a:hover {
+  color: #61dafb;
+}
+
+/* MAIN */
+.Main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ABPI SEARCH */
+.AbpiSearch {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+}
+.AbpiSearch h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--primary-green);
+}
+.FormGroup {
+  margin-bottom: 1rem;
+}
+.FormGroup label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.FormGroup input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.FormGroup .checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.AbpiSearch button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+.AbpiSearch button:hover {
+  background-color: #163027;
+}
+.SearchResults {
+  margin-top: 2rem;
+}
+.SearchResults h3 {
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+}
+.SearchTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.SearchTable th, .SearchTable td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: left;
+}
+.SearchTable th {
+  background-color: var(--light-grey);
+  font-weight: bold;
+}
+
+/* COMPARATOR, CHATBOT, OTHER COMPONENTS OMITTED FOR BREVITY BUT UNCHANGED */
