@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
+const AbpiSearch = () => {
+  const [query, setQuery] = useState("");
 function AbpiSearch() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
@@ -80,6 +82,6 @@ function AbpiSearch() {
       </div>
     </div>
   );
-}
+};
 
 export default AbpiSearch;
