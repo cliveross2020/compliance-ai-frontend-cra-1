@@ -1,6 +1,6 @@
 import './styles.css';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import AbpiSearch from './pages/AbpiSearch';
 import GlobalComparator from './pages/GlobalComparator';
 import PmcaseSearch from './pages/PmcaseSearch';
