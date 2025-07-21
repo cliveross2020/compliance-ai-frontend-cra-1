@@ -1,8 +1,11 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState } from 'react';
+import axios from 'axios';
 
+<<<<<<< HEAD
 const AbpiSearch = () => {
   const [query, setQuery] = useState("");
+=======
+>>>>>>> 19a499f (Add expandable clause result view with AI summary to ABPI Search)
 function AbpiSearch() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
@@ -82,6 +85,6 @@ function AbpiSearch() {
       </div>
     </div>
   );
-};
+}
 
 export default AbpiSearch;
