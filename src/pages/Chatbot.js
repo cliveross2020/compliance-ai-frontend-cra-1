@@ -1,48 +1,51 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../styles.css';
 
 function Chatbot() {
-  const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
+  const [messages, setMessages] = useState([]);
 
-  const sendMessage = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!input.trim()) return;
 
-    const userMessage = { role: 'user', content: input };
-    setMessages([...messages, { ...userMessage, type: 'user' }]);
+    const newMessage = { role: 'user', content: input };
+    setMessages([...messages, newMessage]);
 
     try {
-      const response = await axios.post('https://compliance-ai-backend.onrender.com/api/chat', { message: input });
-      const assistantMessage = { role: 'assistant', content: response.data.reply };
-      setMessages(prev => [...prev, { ...assistantMessage, type: 'assistant' }]);
-      setInput('');
+      const res = await axios.post('/api/chat', { message: input });
+      setMessages((prev) => [...prev, { role: 'assistant', content: res.data.answer }]);
     } catch (err) {
-      console.error('Chat error:', err);
+      console.error('Error:', err);
     }
+
+    setInput('');
   };
 
   return (
-    <div className="PageContainer Chatbot">
-      <h2>Compliance Chatbot</h2>
+    <div className="Main">
+      <div className="PageContainer">
+        <h2>Compliance Chatbot</h2>
 
-      <div className="ChatWindow">
-        {messages.map((msg, idx) => (
-          <div key={idx} className={`Message ${msg.type}`}>
-            {msg.content}
-          </div>
-        ))}
+        <div className="ChatWindow">
+          {messages.map((msg, idx) => (
+            <div key={idx} className={`Message ${msg.role}`}>
+              {msg.content}
+            </div>
+          ))}
+        </div>
+
+        <form onSubmit={handleSubmit} className="ChatForm">
+          <input
+            type="text"
+            placeholder="Ask something about the ABPI Code..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button type="submit">Send</button>
+        </form>
       </div>
-
-      <form onSubmit={sendMessage} className="ChatForm">
-        <input
-          type="text"
-          placeholder="Ask something about the ABPI Code..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button type="submit">Send</button>
-      </form>
     </div>
   );
 }
