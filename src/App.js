@@ -7,21 +7,27 @@ import PmcaseSearch from './pages/PmcaseSearch';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Chatbot from './pages/Chatbot';
+import logo from './assets/CAI Logo 2.png';
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50 text-gray-900">
-        <header className="bg-green-900 text-white px-6 py-4 shadow-md">
-          <h1 className="text-xl font-bold mb-2">Compliance AI</h1>
-          <nav className="flex flex-wrap gap-4 text-sm">
-            <Link to="/" className="hover:underline">Home</Link>
-            <Link to="/abpi" className="hover:underline">ABPI Search</Link>
-            <Link to="/comparator" className="hover:underline">Global Comparator</Link>
-            <Link to="/cases" className="hover:underline">PMCPA Case Search</Link>
-            <Link to="/dashboard" className="hover:underline">Dashboard</Link>
-            <Link to="/chatbot" className="hover:underline">Chatbot</Link>
-          </nav>
+        <header className="Navbar">
+          <div className="Navbar-brand">
+            <img src={logo} alt="Compliance AI Logo" className="Navbar-logo" />
+            <div className="Navbar-title">
+              <span>Compliance</span> <span>AI</span>
+            </div>
+          </div>
+          <ul className="Navbar-links">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/abpi">ABPI Search</Link></li>
+            <li><Link to="/comparator">Global Comparator</Link></li>
+            <li><Link to="/cases">PMCPA Case Search</Link></li>
+            <li><Link to="/dashboard">Dashboard</Link></li>
+            <li><Link to="/chatbot">Chatbot</Link></li>
+          </ul>
         </header>
 
         <main className="p-6">
