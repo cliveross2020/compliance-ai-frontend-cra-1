@@ -1,0 +1,97 @@
+.pmcase-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.pmcase-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.pmcase-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.pmcase-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+}
+
+.pmcase-button {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.pmcase-button:hover {
+  background-color: #15803d;
+}
+
+.pmcase-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pmcase-card {
+  padding: 1rem 1.25rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: #f9fafb;
+}
+
+.pmcase-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.pmcase-card p {
+  margin: 0.25rem 0;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.pmcase-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.pmcase-card a:hover {
+  text-decoration: underline;
+}
+
+.pmcase-loadmore {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .pmcase-form {
+    flex-direction: column;
+  }
+
+  .pmcase-button {
+    width: 100%;
+  }
+}
