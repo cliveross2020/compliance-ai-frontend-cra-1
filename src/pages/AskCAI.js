@@ -45,7 +45,7 @@ const AskCAI = () => {
         <input
           type="text"
           value={query}
-          placeholder="Ask something like 'What does Clause 24 cover?'"
+          placeholder="Ask CAI something like 'What does Clause 24 cover?'"
           onChange={(e) => setQuery(e.target.value)}
           className="ask-cai-input"
         />
