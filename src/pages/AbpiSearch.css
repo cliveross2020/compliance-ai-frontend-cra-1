@@ -1,0 +1,106 @@
+.abpi-search-container {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #d1d5db; /* Tailwind's gray-300 */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  font-family: 'Inter', sans-serif;
+}
+
+.abpi-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.abpi-logo {
+  width: 42px;
+  height: 42px;
+}
+
+.abpi-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937; /* gray-800 */
+}
+
+.abpi-input-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.abpi-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.abpi-button {
+  padding: 0.75rem 1.25rem;
+  background-color: #22543d; /* deep green */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.abpi-button:hover {
+  background-color: #1c4532;
+}
+
+.abpi-results {
+  margin-top: 1.25rem;
+  background: #f9fafb; /* light gray */
+  padding: 1rem;
+  border-radius: 8px;
+  min-height: 150px;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.abpi-loading,
+.abpi-error,
+.abpi-placeholder {
+  color: #6b7280; /* Tailwind gray-500 */
+  font-style: italic;
+}
+
+.abpi-error {
+  color: #b91c1c; /* Tailwind red-700 */
+}
+
+.abpi-summary {
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.abpi-dropdown-wrapper {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.abpi-dropdown {
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.abpi-pdf-viewer {
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
