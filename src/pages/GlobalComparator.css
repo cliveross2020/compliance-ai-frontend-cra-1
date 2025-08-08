@@ -1,0 +1,187 @@
+/* Container Layout */
+.gc-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f4f6f5; /* light grey-green background */
+}
+
+/* Left form section */
+.gc-form {
+  flex: 1 1 280px;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.gc-logo-wrap {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.gc-logo {
+  height: 50px;
+  width: auto;
+}
+
+.gc-title {
+  text-align: center;
+  color: #00695c; /* deep green */
+  margin-bottom: 1rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  font-weight: 600;
+  color: #37474f; /* dark grey */
+}
+
+select,
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #00695c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #004d40;
+}
+
+/* Right results section */
+.gc-content {
+  flex: 2 1 400px;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.gc-results-title {
+  color: #00695c;
+  margin-bottom: 1rem;
+}
+
+.gc-card {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e0e0e0;
+}
+
+.gc-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.gc-card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #37474f;
+}
+
+.gc-code {
+  font-weight: normal;
+  font-size: 0.95rem;
+  color: #607d8b;
+}
+
+.gc-link {
+  font-size: 0.85rem;
+  color: #00695c;
+  text-decoration: none;
+}
+
+.gc-link:hover {
+  text-decoration: underline;
+}
+
+/* List and Snippets */
+.gc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gc-snippet {
+  margin-bottom: 0.75rem;
+  background: #ffffff;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  max-height: 4.5em; /* collapsed height (~3 lines) */
+  transition: max-height 0.4s ease, background-color 0.2s ease;
+}
+
+.gc-snippet:hover {
+  background-color: #f1f8f6; /* light green tint */
+}
+
+.gc-snippet.open {
+  max-height: 1000px; /* expanded height */
+}
+
+/* Read more fade overlay */
+.gc-snippet::after {
+  content: "[Read more]";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.25rem 0.5rem;
+  background: linear-gradient(to right, rgba(255,255,255,0.6), #ffffff);
+  color: #00695c;
+  font-weight: bold;
+  font-size: 0.85rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.gc-snippet.open::after {
+  opacity: 0; /* fade out when expanded */
+  pointer-events: none;
+}
+
+.gc-more {
+  color: #00695c;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+/* States */
+.gc-error {
+  color: #c62828;
+  margin-bottom: 1rem;
+}
+
+.gc-loading {
+  color: #00695c;
+}
+
+.gc-muted {
+  color: #78909c;
+  font-size: 0.9rem;
+}
