@@ -1,0 +1,59 @@
+/* Navbar.css */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.Navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.Navbar-logo {
+  height: 40px;
+  margin-right: 0.6rem;
+}
+
+.Navbar-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.Navbar-title span:first-child {
+  color: #006644; /* Green */
+}
+
+.Navbar-title span:last-child {
+  color: #555555; /* Grey */
+}
+
+.Navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.Navbar-links li a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.Navbar-links li a:hover {
+  background-color: rgba(0, 102, 68, 0.08); /* Light green tint */
+  color: #006644;
+}
+
+.Navbar-links li a.active {
+  background-color: #006644; /* Solid green */
+  color: #ffffff; /* White text */
+}
