@@ -1,0 +1,117 @@
+/* --- HERO LAYOUT: make left narrower, right wider, tighter spacing --- */
+.hero {
+  display: grid;                 /* was flex */
+  grid-template-columns: 0.9fr 1.1fr; /* left smaller, right larger */
+  gap: 1.25rem;                  /* was 2rem */
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 14px;           /* a touch smaller */
+  padding: 1rem;                 /* was 1.25rem */
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.25rem;        /* was 2rem */
+}
+
+.hero-left { /* tighten vertical rhythm */
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;                   /* tighter spacing between blocks */
+}
+
+.hero-logo { height: 56px; }     /* slightly smaller */
+.hero h1 {                       /* slightly smaller title */
+  margin: 0;
+  font-size: 1.9rem;
+  line-height: 1.15;
+  color: var(--green);
+  font-weight: 800;
+}
+.tagline {
+  color: var(--muted);
+  margin: 0;
+  max-width: 58ch;
+  font-size: 1rem;               /* down from 1.05rem */
+}
+.hero-ctas { gap: 0.6rem; margin: 0.25rem 0 0; }
+.hero-points { margin: 0.25rem 0 0; padding-left: 1rem; }
+
+/* Buttons a touch more compact */
+.btn { padding: 0.5rem 0.9rem; border-radius: 10px; }
+
+/* --- FEED CARD: wider and shallower --- */
+.hero-right {
+  max-width: 520px;              /* was 420px */
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem;
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.feed-title {
+  font-size: 1.15rem;            /* slightly smaller */
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 0.5rem;
+}
+
+/* Shallower list to keep page short */
+.feed-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+  max-height: 300px;             /* was 380px */
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Compact feed items */
+.feed-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.6rem;               /* was 0.75rem */
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.feed-source { font-size: 0.8rem; }
+.feed-text   { font-size: 0.92rem; }
+.feed-time   { font-size: 0.72rem; }
+
+.feed-footer { margin-top: 0.5rem; } /* tighter */
+.feed-footer a { font-size: 0.9rem; }
+
+/* --- ROLES & INSIDE: slightly tighter spacing so the page is shorter --- */
+.roles {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* smaller min width */
+  gap: 1rem;                         /* was 1.25rem */
+  margin-bottom: 1.25rem;            /* was 2rem */
+}
+.role-card { padding: 0.9rem; border-radius: 12px; }
+.role-links { gap: 0.4rem; margin-top: 0.6rem; }
+.chip { padding: .4rem .7rem; }
+
+.inside { margin-bottom: 1.25rem; }
+.inside h2 { margin: 0 0 0.75rem; font-size: 1.45rem; }
+.inside-grid { gap: 0.85rem; }
+.inside-card { padding: 0.85rem; border-radius: 10px; }
+.inside-card h4 { font-size: 1rem; margin: 0 0 .35rem; }
+.inside-card p { font-size: 0.95rem; }
+
+/* --- Footer note tighter --- */
+.footnote { font-size: 0.88rem; padding-top: 0.75rem; }
+
+/* --- Responsive: keep improvements but stack cleanly on small screens --- */
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;  /* stack */
+  }
+  .hero-right { max-width: none; }
+  .feed-list { max-height: 260px; } /* shallower on small screens */
+}
