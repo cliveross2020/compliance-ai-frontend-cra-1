@@ -1,0 +1,97 @@
+/* Live Compliance Feed panel */
+.hero-right {
+  flex: 1;
+  max-width: 420px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.feed-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0b4f44;
+  margin-bottom: 0.75rem;
+}
+
+.feed-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+  max-height: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Scrollbar styling */
+.feed-list::-webkit-scrollbar {
+  width: 8px;
+}
+.feed-list::-webkit-scrollbar-thumb {
+  background: rgba(11, 79, 68, 0.3);
+  border-radius: 4px;
+}
+.feed-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.feed-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.feed-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.feed-source {
+  font-weight: 600;
+  color: #0b4f44;
+  font-size: 0.85rem;
+}
+
+.feed-text {
+  color: #1f2937;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.feed-text:hover {
+  color: #0b4f44;
+  text-decoration: underline;
+}
+
+.feed-time {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.feed-footer {
+  margin-top: 0.75rem;
+  text-align: right;
+}
+
+.feed-footer a {
+  font-size: 0.9rem;
+  color: #0b4f44;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.feed-footer a:hover {
+  text-decoration: underline;
+}
