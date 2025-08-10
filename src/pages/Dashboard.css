@@ -1,0 +1,47 @@
+.dashboard {
+  padding: 1.5rem;
+}
+
+.filter-panel {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.filter-panel input,
+.filter-panel button {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.filter-panel button {
+  background: #0b4f44;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.filter-panel button:hover {
+  background: #0d5c50;
+}
+
+.summary {
+  margin-bottom: 1rem;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-table th,
+.results-table td {
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem;
+}
+
+.results-table th {
+  background: #f6faf8;
+}
