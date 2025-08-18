@@ -1,0 +1,229 @@
+/* ===== Layout ===== */
+.workbench {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.wb-left,
+.wb-right {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.wb-left-head,
+.wb-matches-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.wb-left-head h2,
+.wb-right h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #0b4f44;
+}
+
+.wb-download {
+  font-weight: 700;
+  color: #0b4f44;
+  text-decoration: none;
+}
+.wb-download:hover {
+  text-decoration: underline;
+}
+
+/* ===== PDF Viewer Area ===== */
+/* Important: must be scrollable and tall so Adobe/native controls are visible */
+.wb-pdf-wrap {
+  border: 1px solid #eef2f7;
+  border-radius: 10px;
+  background: #f7faf9;
+  height: calc(100vh - 220px);
+  overflow: auto;           /* was hidden — this is the fix */
+}
+
+.wb-pdf {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Adobe Embed container needs explicit width/height to render fully */
+#adobe-dc-view,
+#adobe-pdf-container,
+.adobe-dc-view {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Hint / messages under the viewer */
+.wb-hint {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+.wb-tip {
+  font-size: 0.85rem;
+  color: #155e63;
+}
+
+/* ===== Chat box ===== */
+.wb-qbox textarea {
+  width: 100%;
+  min-height: 110px;
+  resize: vertical;
+  padding: 0.75rem;
+  border: 1px solid #d9e1ea;
+  border-radius: 10px;
+  outline: none;
+}
+.wb-qbox textarea:focus {
+  border-color: #0b4f44;
+  box-shadow: 0 0 0 3px rgba(11, 79, 68, 0.12);
+}
+
+.wb-qbox-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.btn {
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn-primary {
+  background: #0b4f44;
+  color: #fff;
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.wb-count {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+.wb-error {
+  color: #b42318;
+  margin-top: 0.5rem;
+}
+
+/* ===== Answer block ===== */
+.wb-answer {
+  margin-top: 0.85rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+.wb-answer-label {
+  font-weight: 700;
+  color: #0b4f44;
+  margin-bottom: 0.35rem;
+}
+.wb-answer-body {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+/* Inline clickable clause link inside the answer text */
+.clause-link,
+.clause-inline {
+  background: transparent;
+  border: 0;
+  padding: 0 2px;
+  margin: 0 1px;
+  color: #155e63;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.clause-link:hover,
+.clause-inline:hover {
+  opacity: 0.85;
+}
+
+/* ===== Matches (optional) ===== */
+.wb-citations {
+  margin-top: 0.6rem;
+}
+.wb-cite-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0b4f44;
+}
+.wb-cite-pills {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 0.35rem;
+}
+.pill {
+  background: #e8f3f1;
+  color: #0b4f44;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.wb-matches {
+  margin-top: 1rem;
+}
+.wb-matches-head h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #0b4f44;
+}
+.sub {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+.wb-muted {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.wb-match-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.wb-match {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.6rem;
+  background: #fff;
+}
+.wb-match-clause {
+  font-weight: 800;
+  color: #0b4f44;
+  margin-bottom: 0.2rem;
+}
+.wb-match-text {
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1100px) {
+  .workbench {
+    grid-template-columns: 1fr;
+  }
+  .wb-pdf-wrap {
+    height: 60vh;          /* still tall & scrollable on small screens */
+  }
+}
